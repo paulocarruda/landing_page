@@ -32,9 +32,7 @@ body {
 }
 
 section {
-    padding: 27px 10%;
-    min-height: 100vh;  /* Garante que cada seção ocupe toda a altura da tela */
-    box-sizing: border-box;  /* Inclui o padding no cálculo do tamanho */
+    padding: 28px 8%;
 }
 
 .btn-default {
