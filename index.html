@@ -1,327 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Paulo Arruda - Site Profissional</title>
+
     <link rel="stylesheet" href="src/styles/styles.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "x1BTmkzGxcmhuLtug",
+            });
+        })();
+    </script>
+    
+    <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Trilhar - Educação Financeira</title>
 </head>
+
 <body>
+    <!-- Header -->
     <header>
         <nav id="navbar">
-            <img src="/landing_page/src/images/trilhar_aguia_logo_toolbar_small.png" alt="Logo" id="nav_logo">
-
+            <img src="src/images/paulo_arruda_logo.png" alt="Logo" id="nav_logo">
             <ul id="nav_list">
-                <li class="nav-item active">
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#menu">Ferramentas</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials">Avaliações</a>
-                </li>
+                <li class="nav-item active"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#servicos">Serviços</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
             </ul>
-
-            <button class="btn-default">
-                Acessar
-            </button>
-
-            <button id="mobile_btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <button class="btn-default">Contato</button>
+            <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
         </nav>
-
-        <div id="mobile_menu">
-            <ul id="mobile_nav_list">
-                <li class="nav-item">
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#menu">Ferramentas</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials">Avaliações</a>
-                </li>
-            </ul>
-
-            <button class="btn-default">
-                Acessar
-            </button>
-        </div>
     </header>
 
-    <main id="content">
+    <!-- Main -->
+    <main>
+        <!-- Home -->
         <section id="home">
-            <div class="shape"></div>
             <div id="cta">
-                <h1 class="title">
-                    O controle que 
-                    <span>você</span> precisava. 
-                </h1>
-
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit ut aliquam, purus sit amet
-                </p>
-
+                <h1 class="title">Criação de sites profissionais para <span>você</span></h1>
+                <p class="description">Transforme sua presença online com um site moderno, responsivo e estratégico.</p>
                 <div id="cta_buttons">
-                    <a href="#" class="btn-default">
-                        Ver Ferramentas
-                    </a>
-
-                    <a href="tel:+55555555555" id="phone_button">
-                        <button class="btn-default">
-                            <i class="fa-solid fa-phone"></i>
-                        </button>
-                        (62) 99416-5555
-                    </a>
+                    <a href="#servicos" class="btn-default">Ver Serviços</a>
                 </div>
-
                 <div class="social-media-buttons">
-                    <a href="">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-
-                    <a href="">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
-
             <div id="banner">
-                <img src="src/images/capa 01 trilhar.png" alt="">
+                <img src="src/images/banner_paulo_arruda.png" alt="Banner Paulo Arruda">
             </div>
         </section>
 
-        <section id="menu">
-            <h2 class="section-title">Ferramentas</h2>
-            <h3 class="section-subtitle">O melhor para te ajudar</h3>
-
+        <!-- Serviços -->
+        <section id="servicos">
+            <h2 class="section-title">Serviços</h2>
+            <h3 class="section-subtitle">Soluções digitais para impulsionar seu negócio</h3>
             <div id="tools">
                 <div class="tool">
-                    <div class="tool-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="src/images/ic_financas.png" class="tool-image" alt="">
-
-                    <h3 class="tool-title">
-                        Controle Financeiro
-                    </h3>
-
-                    <span class="tool-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="tool-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="tool-price">
-                        
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
+                    <i class="fa-solid fa-laptop-code tool-icon"></i>
+                    <h3 class="tool-title">Site Profissional</h3>
+                    <p class="tool-description">Desenvolvimento de sites responsivos e otimizados para sua marca.</p>
+                    <button class="btn-default">Saiba Mais</button>
                 </div>
-
                 <div class="tool">
-                    <div class="tool-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="src/images/ic_videos.png" class="tool-image" alt="">
-
-                    <h3 class="tool-title">
-                        Videos 
-                    </h3>
-
-                    <span class="tool-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="tool-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="tool-price">
-                        
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
+                    <i class="fa-solid fa-bullhorn tool-icon"></i>
+                    <h3 class="tool-title">Landing Pages</h3>
+                    <p class="tool-description">Páginas otimizadas para campanhas e captação de leads.</p>
+                    <button class="btn-default">Saiba Mais</button>
                 </div>
-
                 <div class="tool">
-                    <div class="tool-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="src/images/ic_grafico.png" class="tool-image" alt="">
-
-                    <h3 class="tool-title">
-                        Relatórios
-                    </h3>
-
-                    <span class="tool-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="tool-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="tool-price">
-                        
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="tool">
-                    <div class="tool-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="src/images/ic_recompensas (1).png" class="tool-image" alt="">
-
-                    <h3 class="tool-title">
-                        Benefícios
-                    </h3>
-
-                    <span class="tool-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="tool-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="tool-price">
-                        
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
+                    <i class="fa-solid fa-store tool-icon"></i>
+                    <h3 class="tool-title">Lojas Virtuais</h3>
+                    <p class="tool-description">E-commerce completo para alavancar suas vendas online.</p>
+                    <button class="btn-default">Saiba Mais</button>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials">
-            <img src="src/images/depoimentos.png" id="testimonial_chef" alt="">
-
-            <div id="testimonials_content">
-                <h2 class="section-title">
-                    Depoimentos
-                </h2>
-                <h3 class="section-subtitle">
-                    O que os clientes falam sobre nós
-                </h3>
-
-                <div id="feedbacks">
-                    <div class="feedback">
-                        <img src="src/images/avatar.png" class="feedback-avatar" alt="">
-
-                        <div class="feedback-content">
-                            <p>
-                                Fulana de Tal
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <p>
-                                "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Repellat voluptatibus cumque dolor ea est quae alias necessitatibus"
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="feedback">
-                        <img src="src/images/avatar.png" class="feedback-avatar" alt="">
-
-                        <div class="feedback-content">
-                            <p>
-                                Fulana de Tal
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <p>
-                                "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Repellat voluptatibus cumque dolor ea est quae alias necessitatibus"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn-default">
-                    Ver mais avaliações
-                </button>
-            </div>
+        <!-- Contato -->
+        <section id="contato">
+            <h2 class="section-title">Contato Empresarial</h2>
+            <p>Utilize o formulário abaixo, caso queira fazer alguma proposta, divulgação ou parceria. Dúvidas e
+                mensagens de outros conteúdos, que não os mencionados, serão ignoradas.</p>
+            <form id="formulario-contato" data-service-id="x1BTmkzGxcmhuLtug" data-template-id="template_6lf457m">
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="text" name="subject" placeholder="Assunto" required>
+                <textarea name="message" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <img src="src/images/wave.svg" alt="">
-
         <div id="footer_items">
-            <span id="copyright">
-                &copy 2025 - Paulo Arruda
-            </span>
-
+            <span>&copy; 2025 - Paulo Arruda</span>
             <div class="social-media-buttons">
-                <a href="">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
+
+    <!-- Script -->
     <script src="src/javascript/script.js"></script>
 </body>
+
 </html>
