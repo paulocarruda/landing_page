@@ -7,7 +7,7 @@
     <title>Paulo Arruda - Site Profissional</title>
 
     <link rel="stylesheet" href="src/styles/styles.css">
-
+    <link rel="icon" type="image/png" href="/src/images/favicon.png">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
@@ -17,92 +17,81 @@
             });
         })();
     </script>
-    
-    <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-    <!-- Header -->
     <header>
-        <nav id="navbar">
-            <img src="src/images/logo_oficial_paulo_arruda.png" alt="Logo" id="nav_logo">
-            <ul id="nav_list">
-                <li class="nav-item active"><a href="#home">Início</a></li>
-                <li class="nav-item"><a href="#servicos">Serviços</a></li>
-                <li class="nav-item"><a href="#contato">Contato</a></li>
+
+        <nav>
+
+            <div class="logo"><img src="/src/images/ARRUDA_LOGO.png" alt="Logo" id="nav_logo"></div>
+            <ul class="menu">
+                <li><a href="#quem-sou">Quem Sou</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
-            <button class="btn-default">Contato</button>
-            <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
+            <div class="hamburguer" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
+    <section id="quem-sou">
+        <h1>Quem sou</h1>
+        <div class="imagens">
+            <img src="/src/images/paulo_em_pe.png" alt="Imagem 1" class="imagem-reveal">
+            <img src="/src/images/1.png" alt="Imagem 2" class="imagem-reveal">
+            <img src="/src/images/2.png" alt="Imagem 3" class="imagem-reveal">
+            <img src="/src/images/3.png" alt="Imagem 4" class="imagem-reveal">
+        </div>
+    </section>
 
-    <!-- Main -->
-    <main>
-        <!-- Home -->
-        <section id="home">
-            <div id="cta">
-                <h1 class="title">Criação de sites profissionais para <span>você</span></h1>
-                <p class="description">Transforme sua presença online com um site moderno, responsivo e estratégico.</p>
-                <div id="cta_buttons">
-                    <a href="#servicos" class="btn-default">Ver Serviços</a>
-                </div>
-                <div class="social-media-buttons">
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div id="banner">
-                <img src="src/images/banner_paulo_arruda.png" alt="Banner Paulo Arruda">
-            </div>
-        </section>
+    <section id="portfolio">
+        <h1>Portfólio</h1>
+        
+  <div class="cards-container">
+    <div class="card reveal-card">
+      <img src="img1.jpg" alt="Imagem 1">
+      <h3>Título 1</h3>
+      <p>Descrição curta do card 1.</p>
+    </div>
+    <div class="card reveal-card">
+      <img src="img2.jpg" alt="Imagem 2">
+      <h3>Título 2</h3>
+      <p>Descrição curta do card 2.</p>
+    </div>
+    <div class="card reveal-card">
+      <img src="img3.jpg" alt="Imagem 3">
+      <h3>Título 3</h3>
+      <p>Descrição curta do card 3.</p>
+    </div>
+    <div class="card reveal-card">
+      <img src="img4.jpg" alt="Imagem 4">
+      <h3>Título 4</h3>
+      <p>Descrição curta do card 4.</p>
+    </div>
+  </div>
+    </section>
 
-        <!-- Serviços -->
-        <section id="servicos">
-            <h2 class="section-title">Serviços</h2>
-            <h3 class="section-subtitle">Soluções digitais para impulsionar seu negócio</h3>
-            <div id="tools">
-                <div class="tool">
-                    <i class="fa-solid fa-laptop-code tool-icon"></i>
-                    <h3 class="tool-title">Site Profissional</h3>
-                    <p class="tool-description">Desenvolvimento de sites responsivos e otimizados para sua marca.</p>
-                    <button class="btn-default">Saiba Mais</button>
-                </div>
-                <div class="tool">
-                    <i class="fa-solid fa-bullhorn tool-icon"></i>
-                    <h3 class="tool-title">Landing Pages</h3>
-                    <p class="tool-description">Páginas otimizadas para campanhas e captação de leads.</p>
-                    <button class="btn-default">Saiba Mais</button>
-                </div>
-                <div class="tool">
-                    <i class="fa-solid fa-store tool-icon"></i>
-                    <h3 class="tool-title">Lojas Virtuais</h3>
-                    <p class="tool-description">E-commerce completo para alavancar suas vendas online.</p>
-                    <button class="btn-default">Saiba Mais</button>
-                </div>
-            </div>
-        </section>
+    <section id="contato">
+        <h2 class="section-title">Contato Empresarial</h2>
+        <p>Utilize o formulário abaixo, caso queira fazer alguma proposta, divulgação ou parceria. Dúvidas e
+            mensagens de outros conteúdos, que não os mencionados, serão ignoradas.</p>
+        <form id="formulario-contato" data-service-id="x1BTmkzGxcmhuLtug" data-template-id="template_6lf457m">
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="text" name="subject" placeholder="Assunto" required>
+            <textarea name="message" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
-        <!-- Contato -->
-        <section id="contato">
-            <h2 class="section-title">Contato Empresarial</h2>
-            <p>Utilize o formulário abaixo, caso queira fazer alguma proposta, divulgação ou parceria. Dúvidas e
-                mensagens de outros conteúdos, que não os mencionados, serão ignoradas.</p>
-            <form id="formulario-contato" data-service-id="x1BTmkzGxcmhuLtug" data-template-id="template_6lf457m">
-                <input type="text" name="name" placeholder="Nome" required>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <input type="text" name="subject" placeholder="Assunto" required>
-                <textarea name="message" placeholder="Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
 
-    <!-- Footer -->
     <footer>
         <div id="footer_items">
-            <span>&copy; 2025 - Paulo Arruda</span>
+            <span>&copy; 2025 - Paulo Arruda - Jesus é o Caminho a Verdade e a Vida!</span>
             <div class="social-media-buttons">
                 <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -113,6 +102,11 @@
 
     <!-- Script -->
     <script src="src/javascript/script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>

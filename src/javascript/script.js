@@ -1,19 +1,9 @@
 /* script.js - EmailJS + menu mobile + scroll reveal + toasts */
 document.addEventListener('DOMContentLoaded', () => {
-  const mobileBtn = document.getElementById('mobile_btn');
-  const mobileMenu = document.getElementById('mobile_menu');
   const header = document.querySelector('header');
   const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('#nav_list .nav-item a');
-
-  // ---------------- MOBILE MENU ----------------
-  if (mobileBtn) {
-    mobileBtn.addEventListener('click', () => {
-      if (mobileMenu) mobileMenu.classList.toggle('active');
-      mobileBtn.querySelector('i')?.classList.toggle('fa-x');
-    });
-  }
-
+    // ---------------- MOBILE MENU ----------------
+  
   // ---------------- SCROLL: SHADOW + ACTIVE MENU ----------------
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
@@ -34,12 +24,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---------------- SCROLLREVEAL ----------------
   try {
-    ScrollReveal().reveal('#cta', { origin: 'left', duration: 1200, distance: '20%' });
-    ScrollReveal().reveal('.tool', { origin: 'bottom', duration: 900, distance: '25px', interval: 100 });
-    ScrollReveal().reveal('#formulario-contato', { origin: 'right', duration: 1200, distance: '20%' });
-  } catch (err) {
-    console.warn('ScrollReveal não disponível', err);
-  }
+  const sr = ScrollReveal({
+    reset: false,          // anima uma vez só
+    distance: '30px',      // distância padrão
+    duration: 1000,        // duração padrão
+    easing: 'ease-in-out', // suavidade da animação
+    viewFactor: 0.3        // quanto da seção precisa aparecer para animar
+  });
+
+  sr.reveal('#cta', { origin: 'left' });
+  sr.reveal('.tool', { origin: 'bottom', interval: 150 });
+  sr.reveal('#formulario-contato', { origin: 'right' });
+  sr.reveal('inicio', { origin: 'top', duration: 800 });
+  sr.reveal('.imagem-reveal', { 
+  origin: 'bottom', 
+  distance: '40px', 
+  duration: 1200, 
+  interval: 200 
+});
+  sr.reveal('.reveal-card', { 
+  origin: 'bottom', 
+  distance: '40px', 
+  duration: 1000, 
+  interval: 200 
+});
+  sr.reveal('footer', { origin: 'bottom', duration: 800 });
+
+} catch (err) {
+  console.warn('ScrollReveal não disponível', err);
+}
 
   // ---------------- EMAILJS FORM ----------------
   const form = document.getElementById('formulario-contato');
@@ -60,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const formData = {
         name: form.querySelector('input[name="name"]').value,
-        message: form.querySelector('textarea[name="menssage"]').value,
+        message: form.querySelector('textarea[name="message"]').value,
         email: form.querySelector('input[name="email"]').value,
         subject: form.querySelector('input[name="subject"]').value,        
       };
