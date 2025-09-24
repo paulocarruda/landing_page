@@ -22,6 +22,7 @@ nav {
 
 .nav_logo {
   font-size: 1.3rem;
+
 }
 
 .menu {
@@ -54,7 +55,7 @@ nav {
 }
 
 .menu li a:hover {
-    color: #39ff14;
+    color: #654321;
 }
 
 .nav-item a {
@@ -67,12 +68,25 @@ nav {
     color: #1abc9c;
 }
 
-
+#inicio {
+  padding: 0px 0px;
+  text-align: end;
+}
 
 #quem-sou {
   text-align: center;
   padding: 60px 20px;
-  background-color: black;
+  background-color: white;
+}
+
+.quem-sou-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* permite quebrar em telas menores */
 }
 
 #quem-sou .imagens {
@@ -86,12 +100,36 @@ nav {
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
 #quem-sou img:hover {
   transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
 
+.quem-sou-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quem-sou-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .quem-sou-texto p {
+    font-size: 1rem;
+  }
 
 #portfolio {
     background:black;
@@ -107,7 +145,12 @@ nav {
   gap: 24px;
   max-width: 900px;
   margin: 0 auto;
-  transform: translateX(40px); /* empurra todo o grid 40px pra direita */
+  transform: translateX(40px);
+   /* empurra todo o grid 40px pra direita */
+  -webkit-transform: translateX(40px);
+  -moz-transform: translateX(40px);
+  -ms-transform: translateX(40px);
+  -o-transform: translateX(40px);
 }
 
 
@@ -119,6 +162,14 @@ nav {
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
@@ -130,14 +181,31 @@ nav {
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
 }
 
 #contato {
-    background: yellow;
+    background: black;
+    text-decoration: white;
+}
+
+.section-title{
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.formulario-texto{
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 section {
-    height: 100vh;
+    height: auto;
     padding: 60px 20px;
 }
 
@@ -171,7 +239,7 @@ form button {
 }
 
 form button {
-  background: #1976d2;
+  background: #654321;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -179,11 +247,11 @@ form button {
 }
 
 form button:hover {
-  background: #1565c0;
+  background: #377c2b;
 }
 /* Footer */
 footer {
-    background: #9dbd8b;
+    background: white;
     padding: 20px;
     text-align: center;
 }
@@ -226,5 +294,17 @@ footer {
       }
       .cards-container {
     grid-template-columns: 1fr; /* apenas 1 coluna no mobile */
+  }
+  .quem-sou-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quem-sou-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .quem-sou-texto p {
+    font-size: 1rem;
   }
     }
