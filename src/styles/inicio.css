@@ -1,0 +1,27 @@
+/* Estilos para o banner responsivo */
+.banner {
+    height: 60vh; /* Define a altura da div como 100% da altura da tela */
+    width: 100%;
+    background-size: cover; /* Faz a imagem cobrir a div inteira */
+    background-position: center; /* Centraliza a imagem no container */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+/* Banner para Desktop (telas grandes, por padrão) */
+.banner {
+    background-image: url('/src/images/banner_desktop_1928\ x\ 1024\ px.png');
+}
+
+/* Banner para Tablet (telas de até 1024px) */
+@media (max-width: 1024px) {
+    .banner {
+        background-image: url('/src/images/banner_1024_768_px.png');
+    }
+}
+
+/* Banner para Mobile (telas de até 768px) */
+@media (max-width: 768px) {
+    .banner {
+        background-image: url('/src/images/banner_768_432_px.png');
+    }
+}

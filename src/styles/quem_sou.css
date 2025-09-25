@@ -1,0 +1,44 @@
+#quem-sou {
+    padding: 60px 20px;
+    text-align: center; /* Centraliza todo o texto da seção */
+}
+
+.bio-container {
+    max-width: 800px; /* Limita a largura do texto */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+.bio-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor leitura */
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.bio-cta {
+    font-size: 1.2rem;
+    font-weight: 600; /* Deixa o texto mais encorpado */
+    color: #654321; /* Cor da sua marca, para destacar */
+    margin-top: 30px;
+}
+
+/* Ajustes para telas menores (mobile) */
+@media (max-width: 768px) {
+    .bio-title {
+        font-size: 2rem;
+    }
+
+    .bio-text {
+        font-size: 1rem;
+    }
+    
+    .bio-cta {
+        font-size: 1.1rem;
+    }
+}

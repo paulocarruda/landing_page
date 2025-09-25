@@ -7,6 +7,10 @@
     <title>Paulo Arruda - Site Profissional</title>
 
     <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/portfolio.css">
+    <link rel="stylesheet" href="/src/styles/quem_sou.css">
+    <link rel="stylesheet" href="/src/styles/inicio.css">
+    <link rel="stylesheet" href="/src/styles/footer.css">
     <link rel="icon" type="image/png" href="/src/images/favicon.png">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -41,49 +45,50 @@
     </header>
 
     <section id="inicio">
-        <div class="imagens">
-            <img src="/src/images/banner 23-09-2025 (2).png" alt="Imagem 1" class="imagem-reveal">
-        </div>
+    <div class="banner"></div>
+    </section>
+
+    <section id="saudacao">
+    <p class="saudacao-texto">Olá, seja bem-vindo(a) à minha página profissional!</p>
     </section>
 
     <section id="quem-sou">
-        <h1>Quem sou</h1>
-        <p> Especialista em finanças, experiente em ajudar pessoas a sairem da dívida e passarem a investir. A vida é curta mas não precisa ser pequena e exige sabedoria nas decisões.</p> 
-        <p> Sendo um profissional altamente motivado e proativo, acredito no poder do aprendizado contínuo e gosto de adquirir novas habilidades e conhecimentos para crescer.</p>
-        <p> Vamos nessa jornada de aprendizado sobre o que é viver com propósito!</p>
+    <div class="bio-container">
+        <h1 class="bio-title">Quem Sou</h1>
+        <p class="bio-text">Minha jornada é sobre mais do que códigos ou números; é sobre liberdade. Sou um profissional de tecnologia da informação e finanças dedicado a mostrar que a vida pode ser grande, mesmo quando parece pequena por causa das dificuldades que surgem.</p>
         
-    </section>
+        <p class="bio-text"><strong>Casado, pai de dois filhos,</strong>  entendo que o sucesso é primeiramente <strong>temer a Deus</strong> e, consequentemente construirmos um caminho com base sólida tendo valores inegociáveis como: <strong> honestidade, respeito, empatia, humildade, liberdade e justiça,</strong> tendo com meta um futuro seguro e com propósito para quem amamos. Com um compromisso constante com o aprendizado, <strong> busco sempre as melhores estratégias para que você não apenas cresça, mas construa um legado.</strong></p>
+        
+        <p class="bio-cta">Vamos juntos nessa jornada de descoberta e propósito?!</p>
+    </div>
+</section>
 
     <section id="portfolio">
-        <h1>Portfólio</h1>
-        
-  <div class="cards-container">
-    <div class="card reveal-card">
-      <img src="img1.jpg" alt="Imagem 1">
-      <h3>Título 1</h3>
-      <p>Descrição curta do card 1.</p>
+    <h1 class="portfolio-text">Portfólio</h1>
+    <div class="cards-container">
+        <div class="aplicativo">
+            <div class="video-wrapper">
+                <video src="/src/images/Trilhar_App ‐ Feito com o Clipchamp (1).mp4"
+                       alt="Aplicativo sendo utilizado" 
+                       autoplay 
+                       loop 
+                       muted 
+                       playsinline>
+                </video>
+            </div>
+            
+            <div class="descricao-card">
+                <h3>Título 1</h3>
+                <p>Descrição curta do card 1. Aqui você pode detalhar mais sobre o aplicativo, suas funcionalidades e o que ele propõe. Este texto estará ao lado do vídeo.</p>
+            </div>
+        </div>
     </div>
-    <div class="card reveal-card">
-      <img src="img2.jpg" alt="Imagem 2">
-      <h3>Título 2</h3>
-      <p>Descrição curta do card 2.</p>
-    </div>
-    <div class="card reveal-card">
-      <img src="img3.jpg" alt="Imagem 3">
-      <h3>Título 3</h3>
-      <p>Descrição curta do card 3.</p>
-    </div>
-    <div class="card reveal-card">
-      <img src="img4.jpg" alt="Imagem 4">
-      <h3>Título 4</h3>
-      <p>Descrição curta do card 4.</p>
-    </div>
-  </div>
-    </section>
 
+    </section>
     <section id="contato">
-        <h2 class="section-title">Contato</h2>
-        <p class="formulario-texto">Utilize o formulário abaixo, caso queira fazer alguma proposta, divulgação ou parceria. Dúvidas e
+        <h1 class="section-title">Contato</h1>
+        <p class="formulario-texto">Utilize o formulário abaixo, caso queira fazer alguma proposta, divulgação ou
+            parceria. Dúvidas e
             mensagens de outros conteúdos, que não os mencionados, serão ignoradas.</p>
         <form id="formulario-contato" data-service-id="x1BTmkzGxcmhuLtug" data-template-id="template_6lf457m">
             <input type="text" name="name" placeholder="Nome" required>
@@ -98,6 +103,7 @@
     <footer>
         <div id="footer_items">
             <span>&copy; 2025 - Paulo Arruda - Jesus é o Caminho a Verdade e a Vida!</span>
+            <span> </span>
             <div class="social-media-buttons">
                 <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>

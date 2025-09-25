@@ -68,128 +68,36 @@ nav {
     color: #1abc9c;
 }
 
+#saudacao {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #f8f8f8; /* Uma cor de fundo suave para destacar */
+}
+
+.saudacao-texto {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+
 #inicio {
   padding: 0px 0px;
   text-align: end;
 }
 
-#quem-sou {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: white;
-}
-
-.quem-sou-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* permite quebrar em telas menores */
-}
-
-#quem-sou .imagens {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-#quem-sou img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-  -webkit-transition: transform 0.3s ease;
-  -moz-transition: transform 0.3s ease;
-  -ms-transition: transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-}
-
-#quem-sou img:hover {
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
-}
-
-.quem-sou-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .quem-sou-texto h2 {
-    font-size: 1.6rem;
-  }
-
-  .quem-sou-texto p {
-    font-size: 1rem;
-  }
-
-#portfolio {
-    background:black;
-}
-#cards {
-  padding: 60px 20px;
-  text-align: end;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 900px;
-  margin: 0 auto;
-  transform: translateX(40px);
-   /* empurra todo o grid 40px pra direita */
-  -webkit-transform: translateX(40px);
-  -moz-transform: translateX(40px);
-  -ms-transform: translateX(40px);
-  -o-transform: translateX(40px);
-}
-
-
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-  -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
-  -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
-  -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
-  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  -webkit-transform: translateY(-8px);
-  -moz-transform: translateY(-8px);
-  -ms-transform: translateY(-8px);
-  -o-transform: translateY(-8px);
-}
-
 #contato {
     background: black;
     text-decoration: white;
+    max-width: auto;
+}
+
+#contato h1, #contato p { /* Aplica estilos para ambos h1 e p na seção */
+    color: #fff;
+    margin-bottom: 20px;
+}
+#contato h1 {
+    font-size: 2.8em;
 }
 
 .section-title{
@@ -207,6 +115,8 @@ nav {
 section {
     height: auto;
     padding: 60px 20px;
+    margin-top: 0%;
+    margin-left: 0%;
 }
 
 form {
@@ -223,10 +133,10 @@ form textarea {
     border-radius: 8px;
     border: none;
     font-size: 16px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
 }
 
 form button {
@@ -234,20 +144,28 @@ form button {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 100%; /* ocupa toda a largura disponível */
-  box-sizing: border-box;
+  width: 100%;
+  /*ocupatodaalarguradisponível*/box-sizing: border-box;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
 
 form button {
-  background: #654321;
+  background: #333;
   color: white;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 
 form button:hover {
-  background: #377c2b;
+  background: #654321;
 }
 /* Footer */
 footer {
@@ -270,15 +188,19 @@ footer {
     }
     @media (max-width: 768px) {
       .menu {
-        display: none; /* esconde o menu padrão */
-        flex-direction: column;
-        background: #1565c0;
+        display: none;
+        /*escondeomenupadrão*/flex-direction: column;
+        background: #333;
         position: absolute;
         top: 60px;
         right: 20px;
         padding: 15px;
         border-radius: 8px;
-      }
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+}
 
       .menu.active {
         display: flex; /* aparece quando clica no hambúrguer */
@@ -295,16 +217,4 @@ footer {
       .cards-container {
     grid-template-columns: 1fr; /* apenas 1 coluna no mobile */
   }
-  .quem-sou-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .quem-sou-texto h2 {
-    font-size: 1.6rem;
-  }
-
-  .quem-sou-texto p {
-    font-size: 1rem;
-  }
-    }
+}

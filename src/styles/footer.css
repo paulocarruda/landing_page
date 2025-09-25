@@ -1,0 +1,34 @@
+footer {
+    background: whitesmoke;
+    padding: 20px;
+    text-align: center;
+}
+
+#footer_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebrar a linha */
+}
+
+#footer_items span {
+    text-align: left;
+}
+
+.social-media-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Regras para telas menores */
+@media (max-width: 768px) {
+    #footer_items {
+        flex-direction: column; /* Empilha os elementos */
+        gap: 15px;
+    }
+    
+    #footer_items span {
+        text-align: center;
+    }
+}
