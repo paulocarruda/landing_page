@@ -8,19 +8,19 @@
 
 /* Banner para Desktop (telas grandes, por padrão) */
 .banner {
-    background-image: url('/src/images/banner_desktop_1928_1024_px.png');
+    background-image: url('/src/images/banner_desktop_1928_1024_px_atualizado.png');
 }
 
 /* Banner para Tablet (telas de até 1024px) */
 @media (max-width: 1024px) {
     .banner {
-        background-image: url('/src/images/banner_1024_768_px.png');
+        background-image: url('/src/images/banner_1024_768_px_atualizado.png');
     }
 }
 
 /* Banner para Mobile (telas de até 768px) */
 @media (max-width: 768px) {
     .banner {
-        background-image: url('/src/images/banner_768_432_px.png');
+        background-image: url('/src/images/banner_768_432_px_atualizado.png');
     }
 }
