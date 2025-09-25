@@ -1,34 +1,33 @@
 footer {
-    background: whitesmoke;
+    background: white;
     padding: 20px;
-    text-align: center;
 }
 
 #footer_items {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap; /* Permite quebrar a linha */
+    text-align: center;
+    gap: 15px;
 }
 
-#footer_items span {
-    text-align: left;
+#footer_items span,
+#footer_items p,
+#footer_items a {
+    margin: 0;
 }
 
 .social-media-buttons {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Espaço entre os ícones */
 }
 
-/* Regras para telas menores */
-@media (max-width: 768px) {
-    #footer_items {
-        flex-direction: column; /* Empilha os elementos */
-        gap: 15px;
-    }
-    
-    #footer_items span {
-        text-align: center;
-    }
+.social-media-buttons a {
+    color: #654321; /* Cor dos ícones, use a cor da sua marca */
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.social-media-buttons a:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
 }

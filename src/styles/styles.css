@@ -11,18 +11,34 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: #333;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    background-color: black;
-    align-items: center;
-    padding: 15px;
     z-index: 1000;
+    transform: translateY(-100%);
+    /*Ocultaanavbar,movendo-aparacima*/transition: transform 0.5s ease-in-out;
+    /*Adicionaumatransiçãosuave*/box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+     /* Sombra para destacar */:;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
 }
 
-.nav_logo {
-  font-size: 1.3rem;
+nav.show {
+    transform: translateY(0);
+     /* Faz a navbar aparecer */:;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
 
+.logo h1 {
+    font-size: 1.3rem; /* Para combinar com o tamanho da fonte que você já tem na nav */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: white; /* Define a cor do texto para branco */
+    margin: 20px; /* Remove margens padrão do h1 para um alinhamento perfeito */
 }
 
 .menu {
@@ -216,5 +232,16 @@ footer {
       }
       .cards-container {
     grid-template-columns: 1fr; /* apenas 1 coluna no mobile */
+  }
+
+  @media (max-width: 768px) {
+    nav {
+        flex-direction: row; /* Empilha os itens (logo e menu) verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    .logo {
+        margin-bottom: 0px; /* Adiciona um pequeno espaçamento entre o logo e o menu */
+    }  
   }
 }

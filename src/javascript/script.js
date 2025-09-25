@@ -2,8 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header');
   const sections = document.querySelectorAll('section');
-    // ---------------- MOBILE MENU ----------------
-  
+  // ---------------- MOBILE MENU ----------------
+
   // ---------------- SCROLL: SHADOW + ACTIVE MENU ----------------
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
@@ -22,37 +22,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---------------- SCROLLREVEAL ----------------
-  try {
-  const sr = ScrollReveal({
-    reset: false,          // anima uma vez só
-    distance: '30px',      // distância padrão
-    duration: 1000,        // duração padrão
-    easing: 'ease-in-out', // suavidade da animação
-    viewFactor: 0.3        // quanto da seção precisa aparecer para animar
+  let lastScrollY = window.scrollY;
+  const nav = document.querySelector('nav');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) { // Oculte a navbar se o usuário rolar para cima
+      nav.classList.add('show');
+    } else { // Mostre a navbar se o usuário rolar para baixo
+      nav.classList.remove('show');
+    }
+
+    lastScrollY = window.scrollY;
   });
 
-  sr.reveal('#cta', { origin: 'left' });
-  sr.reveal('.tool', { origin: 'bottom', interval: 150 });
-  sr.reveal('#formulario-contato', { origin: 'right' });
-  sr.reveal('inicio', { origin: 'top', duration: 800 });
-  sr.reveal('.imagem-reveal', { 
-  origin: 'bottom', 
-  distance: '40px', 
-  duration: 1200, 
-  interval: 200 
-});
-  sr.reveal('.reveal-card', { 
-  origin: 'bottom', 
-  distance: '40px', 
-  duration: 1000, 
-  interval: 200 
-});
-  sr.reveal('footer', { origin: 'bottom', duration: 800 });
+  // ---------------- SCROLLREVEAL ----------------
+  try {
+    const sr = ScrollReveal({
+      reset: false,          // anima uma vez só
+      distance: '30px',      // distância padrão
+      duration: 1000,        // duração padrão
+      easing: 'ease-in-out', // suavidade da animação
+      viewFactor: 0.3        // quanto da seção precisa aparecer para animar
+    });
 
-} catch (err) {
-  console.warn('ScrollReveal não disponível', err);
-}
+    sr.reveal('#cta', { origin: 'left' });
+    sr.reveal('.tool', { origin: 'bottom', interval: 150 });
+    sr.reveal('#formulario-contato', { origin: 'right' });
+    sr.reveal('inicio', { origin: 'top', duration: 800 });
+    sr.reveal('.imagem-reveal', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 1200,
+      interval: 200
+    });
+    sr.reveal('.reveal-card', {
+      origin: 'bottom',
+      distance: '40px',
+      duration: 1000,
+      interval: 200
+    });
+    sr.reveal('footer', { origin: 'bottom', duration: 800 });
+
+  } catch (err) {
+    console.warn('ScrollReveal não disponível', err);
+  }
 
   // ---------------- EMAILJS FORM ----------------
   const form = document.getElementById('formulario-contato');
@@ -75,12 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
         name: form.querySelector('input[name="name"]').value,
         message: form.querySelector('textarea[name="message"]').value,
         email: form.querySelector('input[name="email"]').value,
-        subject: form.querySelector('input[name="subject"]').value,        
+        subject: form.querySelector('input[name="subject"]').value,
       };
       console.log(formData);
       emailjs.send('service_ewe44qo', 'template_6lf457m', formData)
         .then(() => {
-            console.log('Sucesso!');
+          console.log('Sucesso!');
           showToast('Mensagem enviada com sucesso!', 'success');
           form.reset();
         })
