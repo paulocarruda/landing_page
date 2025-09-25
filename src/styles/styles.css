@@ -14,11 +14,13 @@ nav {
     background-color: #333;
     width: 100%;
     display: flex;
+    justify-content: space-between; /* Mantém os itens nas extremidades */
+    align-items: center;
+    padding: 15px;
     z-index: 1000;
     transform: translateY(-100%);
     /*Ocultaanavbar,movendo-aparacima*/transition: transform 0.5s ease-in-out;
     /*Adicionaumatransiçãosuave*/box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-     /* Sombra para destacar */:;
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
@@ -27,7 +29,6 @@ nav {
 
 nav.show {
     transform: translateY(0);
-     /* Faz a navbar aparecer */:;
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -37,7 +38,7 @@ nav.show {
 .logo h1 {
     font-size: 1.3rem; /* Para combinar com o tamanho da fonte que você já tem na nav */
     font-weight: bold; /* Deixa o texto em negrito */
-    color: white; /* Define a cor do texto para branco */
+    color: #DEDEDE; /* Define a cor do texto para branco */
     margin: 20px; /* Remove margens padrão do h1 para um alinhamento perfeito */
 }
 
@@ -61,7 +62,7 @@ nav.show {
 
 .menu li a {
     text-decoration: none;
-    color: white;
+    color: #DEDEDE;
     font-weight: 500;
     transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -104,12 +105,12 @@ nav.show {
 
 #contato {
     background: black;
-    text-decoration: white;
+    text-decoration: #DEDEDE;
     max-width: auto;
 }
 
 #contato h1, #contato p { /* Aplica estilos para ambos h1 e p na seção */
-    color: #fff;
+    color: #DEDEDE;
     margin-bottom: 20px;
 }
 #contato h1 {
@@ -117,13 +118,13 @@ nav.show {
 }
 
 .section-title{
-  color: white;
+  color: #DEDEDE;
   text-align: center;
   padding-bottom: 20px;
 }
 
 .formulario-texto{
-  color: white;
+  color: #DEDEDE;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -149,10 +150,10 @@ form textarea {
     border-radius: 8px;
     border: none;
     font-size: 16px;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 form button {
@@ -162,15 +163,15 @@ form button {
   border-radius: 6px;
   width: 100%;
   /*ocupatodaalarguradisponível*/box-sizing: border-box;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
 }
 
 form button {
   background: #333;
-  color: white;
+  color: #DEDEDE;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
@@ -183,12 +184,6 @@ form button {
 form button:hover {
   background: #654321;
 }
-/* Footer */
-footer {
-    background: white;
-    padding: 20px;
-    text-align: center;
-}
 
 .hamburguer {
       display: none;
@@ -200,8 +195,27 @@ footer {
     .hamburguer span {
       width: 25px;
       height: 3px;
-      background: white;
+      background: #DEDEDE;
     }
+
+    /* Estilo para os ícones do portfólio */
+    .descricao-card a i {
+        font-size: 6rem;
+        /* Aumenta o tamanho do ícone */
+        color: #333;
+        /* Cor do ícone */
+        transition: color 0.3s ease;
+        /* Adiciona uma transição suave para a mudança de cor */
+    }
+
+    /* Efeito ao passar o mouse */
+    .descricao-card a:hover i {
+        color: #00bfff;
+        /* Muda a cor ao passar o mouse, para dar destaque */
+    }
+
+
+
     @media (max-width: 768px) {
       .menu {
         display: none;

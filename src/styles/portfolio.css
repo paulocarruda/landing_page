@@ -3,14 +3,17 @@
     padding: 60px 20px;
     text-align: center;
     background-color: #333;
-    color: #fff;
+    color: #DEDEDE;
     overflow: hidden;
 }
 
-#portfolio h1, #portfolio p { /* Aplica estilos para ambos h1 e p na seção */
-    color: #fff;
+#portfolio h1,
+#portfolio p {
+    /* Aplica estilos para ambos h1 e p na seção */
+    color: #DEDEDE;
     margin-bottom: 20px;
 }
+
 #portfolio h1 {
     font-size: 2.8em;
 }
@@ -26,20 +29,30 @@
 /* --- Card Individual (.aplicativo) - AGORA UM CONTAINER FLEX --- */
 .aplicativo {
     max-width: 900px;
-    /*Larguramáximaparaocardcompleto(vídeo+descrição)*/width: 90vw;
-    /*Ocupa90%dalarguradatela*/margin: 0 auto;
-    /*Centralizaocard*/padding: 20px;
-    /*Aumentaopaddinginternoparadarespaçoaoconteúdo*/border: 1px solid #cceeff;
+    /*Larguramáximaparaocardcompleto(vídeo+descrição)*/
+    width: 90vw;
+    /*Ocupa90%dalarguradatela*/
+    margin: 0 auto;
+    /*Centralizaocard*/
+    padding: 20px;
+    /*Aumentaopaddinginternoparadarespaçoaoconteúdo*/
+    border: 1px solid ##DEDEDE;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     background-color: #000;
     display: flex;
-    /*TRANSFORMA.aplicativoemumcontainerflexbox*/flex-wrap: wrap;
-    /*Permitequeositensquebremparaalinhadebaixoemtelaspequenas*/align-items: center;
-    /*Centralizaositens(vídeoedescrição)verticalmente*/justify-content: center;
-    /*Centralizaositenshorizontalmentesehouverespaçoextra*/gap: 20px;
-    /*Espaçamentoentreovídeoeadescrição*/text-align: left;
-    /*Otextodentrodocardagorapodeseralinhadoàesquerda(vocêpodeajustarissopara'center'sepreferir)*/transition: transform 0.3s ease;
+    /*TRANSFORMA.aplicativoemumcontainerflexbox*/
+    flex-wrap: wrap;
+    /*Permitequeositensquebremparaalinhadebaixoemtelaspequenas*/
+    align-items: center;
+    /*Centralizaositens(vídeoedescrição)verticalmente*/
+    justify-content: center;
+    /*Centralizaositenshorizontalmentesehouverespaçoextra*/
+    gap: 20px;
+    /*Espaçamentoentreovídeoeadescrição*/
+    text-align: left;
+    /*Otextodentrodocardagorapodeseralinhadoàesquerda(vocêpodeajustarissopara'center'sepreferir)*/
+    transition: transform 0.3s ease;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -56,13 +69,16 @@
 
 /* --- Wrapper do Vídeo --- */
 .video-wrapper {
-    flex: 1 1 400px; /* Flex shorthand: grow, shrink, basis.
+    flex: 1 1 400px;
+    /* Flex shorthand: grow, shrink, basis.
                         O vídeo tentará ter 400px de largura base,
                         pode crescer (1) ou encolher (1). Ajuste 400px conforme preferir. */
-    max-width: 100%; /* Garante que o wrapper não ultrapasse a largura do card */
+    max-width: 100%;
+    /* Garante que o wrapper não ultrapasse a largura do card */
     position: relative;
     /* Se você está usando a técnica padding-bottom para a proporção do vídeo: */
-    /* padding-bottom: 56.25%; */ /* Para 16:9 */
+    /* padding-bottom: 56.25%; */
+    /* Para 16:9 */
     /* height: 0; */
     /* overflow: hidden; */
 }
@@ -70,7 +86,8 @@
 /* --- Vídeo em si (dentro do wrapper) --- */
 .video-wrapper video {
     width: 100%;
-    height: auto; /* Ou height: 100%; e position: absolute; top:0; left:0; object-fit: cover;
+    height: auto;
+    /* Ou height: 100%; e position: absolute; top:0; left:0; object-fit: cover;
                      se estiver usando a técnica padding-bottom no .video-wrapper */
     display: block;
     border-radius: 8px;
@@ -78,52 +95,73 @@
 
 /* --- Bloco da Descrição --- */
 .descricao-card {
-    flex: 1 1 350px; /* A descrição tentará ter 350px de largura base,
+    flex: 1 1 350px;
+    /* A descrição tentará ter 350px de largura base,
                         pode crescer (1) ou encolher (1). Ajuste 350px. */
-    max-width: 100%; /* Garante que a descrição não ultrapasse a largura do card */
-    color: #fff; /* Garante que o texto seja visível no fundo preto do card */
-    padding: 0 10px; /* Pequeno padding lateral para o texto não colar nas bordas do bloco */
+    max-width: 100%;
+    /* Garante que a descrição não ultrapasse a largura do card */
+    color: #DEDEDE;
+    /* Garante que o texto seja visível no fundo preto do card */
+    padding: 0 10px;
+    /* Pequeno padding lateral para o texto não colar nas bordas do bloco */
+    text-align: center;
 }
 
 .descricao-card h3 {
-    margin-top: 0; /* Remove margem superior padrão se o vídeo já estiver com margem */
+    margin-top: 0;
+    /* Remove margem superior padrão se o vídeo já estiver com margem */
     margin-bottom: 10px;
-    font-size: 1.8em; /* Título um pouco maior */
-    color: #00bfff; /* Exemplo de cor para o título */
+    font-size: 1.8em;
+    /* Título um pouco maior */
+    color: #00bfff;
+    /* Exemplo de cor para o título */
 }
 
 .descricao-card p {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1.1em;
-    line-height: 1.6; /* Melhora a legibilidade */
+    line-height: 1.6;
+    /* Melhora a legibilidade */
     color: #ccc;
 }
 
 /* --- Media Queries para Responsividade --- */
 @media (max-width: 768px) {
     .aplicativo {
-        flex-direction: column; /* Em telas menores, o vídeo e a descrição ficam um abaixo do outro */
+        flex-direction: column;
+        /* Em telas menores, o vídeo e a descrição ficam um abaixo do outro */
         padding: 15px;
-        text-align: center; /* Centraliza o texto quando estão em coluna */
+        text-align: center;
+        /* Centraliza o texto quando estão em coluna */
     }
-    .video-wrapper, .descricao-card {
-        flex: 1 1 100%; /* Cada um ocupa 100% da largura em telas pequenas */
+
+    .video-wrapper,
+    .descricao-card {
+        flex: 1 1 100%;
+        /* Cada um ocupa 100% da largura em telas pequenas */
         max-width: 100%;
     }
+
     .descricao-card h3 {
-        margin-top: 15px; /* Adiciona margem acima do título quando estão em coluna */
+        margin-top: 15px;
+        /* Adiciona margem acima do título quando estão em coluna */
     }
+    
 }
 
 @media (max-width: 480px) {
     .aplicativo {
         padding: 10px;
     }
+
     .descricao-card h3 {
         font-size: 1.5em;
     }
+
     .descricao-card p {
         font-size: 1em;
     }
+
+    
 }
