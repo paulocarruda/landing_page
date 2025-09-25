@@ -11,6 +11,7 @@
 #portfolio p {
     /* Aplica estilos para ambos h1 e p na seção */
     color: #DEDEDE;
+    margin-top: auto;
     margin-bottom: 20px;
 }
 
